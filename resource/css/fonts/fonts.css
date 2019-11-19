@@ -1,0 +1,35 @@
+@font-face {
+  font-family: OpenSansBold;
+  src: url("../../../public/fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../../../public/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url("../../../public/fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url("../../../public/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: RalewayBold;
+  src: url("../../../public/fonts/Raleway/Raleway-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url("../../../public/fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: RalewayLight;
+  src: url("../../../public/fonts/Raleway/Raleway-Light.ttf") format("truetype");
+}
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,445 @@
+$primary-color: #333333
+$secondary-color: #F98737
+$text-color: #A6A6A9
+
+@media (max-width: 1350px)
+	.main-screen .main
+		p:last-of-type
+			display: none
+
+
+@media (max-width: 1250px)
+	.picture .gallery-popup img
+		max-width: 550px
+
+
+
+
+
+@media (max-width: 1200px)
+	.main-screen
+		height: auto
+		display: block
+
+	.main-screen .intro
+		margin: 50px 0
+		display: block
+
+		h1
+			margin-bottom: 50px
+		
+		p, h1
+			text-align: center
+
+		p:first-of-type::after
+			display: none
+
+		button
+			display: block
+			margin: 0 auto
+			margin-top: 50px
+
+	.main-screen .main
+		margin: 0 10%
+		width: 80%
+		margin-bottom: 100px
+
+	.main-screen form
+		width: 100%
+		max-width: 450px
+		min-width: 400px
+		margin: 0 auto
+		background-color: white
+		border-radius: 7px
+		margin-bottom: 50px
+
+	.main-screen .social-media
+		position: static
+		
+		p
+			display: none
+
+	.tabs
+		justify-content: space-between
+		align-items: flex-start
+
+	.tabs .tabs-navigation
+		margin-right: 50px
+		flex-basis: 150px
+
+	.tabs .tabs-panel
+		flex-basis: calc(100% - 150px)
+
+	.tabs .tabs-item
+		flex-wrap: wrap
+
+	.tabs .tabs-item__text
+		flex-basis: 100%
+		position: relative
+
+		p 
+			text-align: justify
+
+		button
+			position: absolute
+			right: 0
+
+	.tabs .tabs-item__img
+		margin-top: 100px
+		flex-basis: 100%
+		text-align: center
+
+		img
+			max-width: 300px
+
+	.pricing .pricing-items
+		display: flex
+		flex-wrap: wrap
+
+	.pricing .pricing-item
+		flex-basis: calc(50% - 20px)
+		text-align: center
+
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 50px
+
+	.pricing .pricing-item--active
+		margin-top: 0
+
+		h3
+			background-color: $secondary-color
+
+		.price__description
+			height: 50px
+
+	.pricing .price__description
+		height: 50px
+
+	.pricing .pricing-item:hover 
+		margin-top: 0
+
+
+
+
+@media (max-width: 1100px)
+	.testimonials .testimonials-items
+		flex-wrap: wrap
+
+	.testimonials .testimonials-item
+		flex-basis: calc(50% - 20px)
+
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 100px
+
+	.picture .picture-gallery
+		grid-template-columns: repeat(4, 1fr)
+		grid-template-rows: repeat(3, 170px)
+
+
+
+
+
+@media (max-width: 1000px)
+	.main-screen nav
+		padding: 15px 5%
+
+	.main-screen .social-media
+		padding: 20px 5%
+
+	.sublist
+		flex-wrap: wrap
+
+	.sublist .sublist-img
+		flex-basis: 100%
+		order: 1
+
+	.sublist .sublist-content
+		flex-basis: 100%
+		padding-left: 0
+		margin-bottom: 50px
+
+	.testimonials .testimonials-item__text
+		height: 200px
+
+	.contact, .testimonials, .pricing, .features, .sublist, .tabs
+		padding: 5%
+
+	.picture
+		padding: 5% 0
+
+	.contact .message
+		
+		textarea
+			margin-left: 20px
+
+	.contact .user-info
+		margin-right: 20px
+
+
+
+@media (max-width: 900px)
+
+	.main-screen nav
+		display: none
+
+	.main-screen .menu-mobile
+		display: block
+
+	footer .footer-wrapper 
+		padding-bottom: 70px
+
+	.picture .picture-gallery
+		display: none
+
+	.picture .carousel
+		display: flex
+		
+		
+
+
+
+
+
+@media (max-width: 870px)
+
+	.main-screen .menu
+		display: none
+
+	.main-screen .social-media
+		height: 100px
+
+	.main-screen .social-media__description
+		display: none
+
+	.main-screen .social-icons
+		flex-basis: 100%
+
+		a
+			margin: 0
+
+
+
+@media (max-width: 800px)
+	.tabs
+		display: block
+
+	.tabs .tabs-navigation
+		display: flex
+		justify-content: center
+		flex-basis: 100%
+		margin-right: 0
+		margin-bottom: 50px
+
+		div
+
+			&:not(:last-child)
+				border-right: 2px solid #C6C6C6
+				border-bottom: none
+
+			&:first-child
+				border-radius: 5px 0 0 5px
+
+			&:last-child
+				border-radius: 0 5px 5px 0
+
+	.features .features-items
+		flex-wrap: wrap
+		
+	.features .features-item
+		flex-basis: calc(50% - 20px)
+
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 100px
+
+	.contact .message
+		justify-content: center
+		margin-bottom: 50px
+		flex-wrap: wrap
+
+		textarea
+			flex-basis: 100%
+			height: 150px
+			margin-left: 0
+
+	.contact .user-info
+		flex-basis: 70%
+		margin-right: 0
+
+		input
+			flex-basis: 100%
+			margin-bottom: 50px
+
+
+
+
+@media (max-width: 750px)
+
+	.main-screen .main
+
+		h1
+			margin-bottom: 20px
+
+		button
+			margin-top: 20px
+
+
+
+
+
+@media (max-width: 700px)
+
+	.features .features-items
+		justify-content: center
+		
+	.features .features-item
+		flex-basis: 70%
+
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 50px
+
+	.pricing .pricing-items
+		justify-content: center
+
+	.pricing .pricing-item
+		flex-basis: 70%
+
+	.testimonials .testimonials-item__text
+		height: 150px
+	
+	.testimonials .testimonials-item
+		flex-basis: 100%
+
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 5%
+
+
+
+
+
+@media (max-width: 500px)
+	.main-screen .main
+		margin-bottom: 50px
+
+		p:first-of-type
+			font-size: 2em
+
+	.main-screen form
+		max-width: 290px
+		min-width: 290px
+
+		h3
+			padding: 10px 15px
+			font-size: 2em
+
+		input[type=submit]
+			padding: 10px 20px
+			font-size: 1.5em
+
+		input:not(:last-child)
+			margin: 25px auto
+
+	.main-screen .social-media
+		height: 70px
+
+	.main-screen .social-icons
+		font-size: 2.5em
+
+	.main-screen .menu-mobile div a
+		font-size: 2.5em
+
+		&:not(:last-of-type)
+			margin-bottom: 20px
+
+	.picture .carousel
+
+		img
+			width: 100%
+
+		i.fa-long-arrow-alt-left, i.fa-long-arrow-alt-right
+			color: $secondary-color
+			opacity: 1
+			background-color: rgba(0, 0, 0, .5)
+			border-radius: 50%
+			padding: 10px
+			height: 70px
+			width: 70px
+			top: calc(50% - 35px)
+
+	.picture
+		padding: 50px 0
+		
+	.picture .picture__description p
+		text-align: justify
+
+	.sublist .sublist-content p
+		text-align: justify
+
+	.features .features-items
+		justify-content: center
+		
+	.features .features-item
+		flex-basis: 100%
+
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 50px
+
+	.pricing .pricing-item
+		flex-basis: 100%
+
+	.testimonials .testimonials-item
+		&:not(:last-child)
+			margin-bottom: 50px
+
+	.contact, .custom, .testimonials, .pricing, .features, .sublist, .tabs
+		padding: 50px 20px
+
+	.contact .user-info
+		flex-basis: 100%
+
+	.pricing .pricing-item
+
+		h3
+			font-size: 2.5em
+
+	.pricing .price
+		height: auto
+
+		span
+			font-size: 7em !important
+
+		span:first-of-type
+			font-size: 3em !important
+
+		p
+			font-size: 1.2em
+
+	.vertical-digit
+		vertical-align: -5px
+
+	.pricing .price__description
+		font-size: 1.5em
+
+	.pricing .pricing-item__description
+
+		li
+			font-size: 1.5em
+
+	.testimonials .testimonials-item__text
+		height: 220px
+
+	.header-main
+
+		h2
+			font-size: 3em
+
+	.social-icons
+		font-size: 2em
+
+	.tabs .tabs-navigation div
+		font-size: 1.2em

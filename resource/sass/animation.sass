@@ -1,0 +1,519 @@
+$primary-color: #333333
+$secondary-color: #F98737
+$text-color: #A6A6A9
+
+.headerMain-hide
+	opacity: 0
+	transform: scale(0)
+
+.headerMain-show
+	transition: all 1s
+	transform: scale(1)
+	opacity: 1
+
+
+.primaryBtn-hide
+	opacity: 0
+
+	&::after
+		width: 0
+		height: 0
+		border-bottom-color: transparent
+		border-right-color: transparent
+
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		background-color: transparent
+		border: 2px solid white
+		border-top-color: transparent
+		border-left-color: transparent
+		width: 0
+		height: 0
+		bottom: -2px
+		right: -2px
+
+.primaryBtn-show
+	transition: opacity 1s, background-color .3s
+	opacity: 1
+
+	&::after
+		transition: all 1s
+		width: 100%
+		height: 100%
+
+	&::before
+		transition: all 1s
+		content: ''
+		display: block
+		position: absolute
+		background-color: transparent
+		border: 2px solid white
+		border-top-color: transparent
+		border-left-color: transparent
+		bottom: -2px
+		right: -2px
+		width: 100%
+		height: 100%
+
+
+
+
+// =============================== SECTION-MAIN-SCREEN
+
+.main-screen .nav-hide
+	transform: translateY(-110%)
+
+.main-screen .nav-show
+	transition: transform 1s
+	transform: translateY(0)
+
+.main-screen .social-media-hide
+	transform: translateY(110%)
+
+.main-screen .social-media-show
+	transition: transform 1s
+	transform: translateY(0)
+
+.main-screen .main-hide
+
+	h1, p
+		transform: translateX(-100%)
+		opacity: 0
+
+.main-screen .main-show
+
+	h1
+		transition: transform 1s, opacity 1s
+		transform: translateX(0)
+		opacity: 1
+
+	p:first-of-type
+		transition: transform 1s .2s, opacity 1s .2s
+		transform: translateX(0)
+		opacity: 1
+
+	p:last-of-type
+		transition: transform 1s .4s, opacity 1s .4s
+		transform: translateX(0)
+		opacity: 1
+
+.main-screen .main-form-hide
+	transform: scale(0)
+
+.main-screen .main-form-show
+	transition: transform 1s
+	transform: scale(1)
+
+
+
+
+// =============================== SECTION-TABS
+
+.tabs-navigation-hide div
+	opacity: 0
+
+.tabs-navigation-show div
+
+	&:nth-child(1)
+		transition: opacity 1s
+		opacity: 1
+
+	&:nth-child(2)
+		transition: opacity 1s .3s
+		opacity: 1
+
+	&:nth-child(3)
+		transition: opacity 1s .6s
+		opacity: 1
+
+// =============================== SECTION-SUBLIST
+
+.sublist-hide
+
+	.sublist-img
+		transform: translateX(-100%)
+		opacity: 0
+
+	.sublist-content
+		h3, & > p
+			transform: translateX(100%)
+			opacity: 0
+
+	.sublist-upload, .sublist-download
+
+		.sublist-upload-img, .sublist-download-img
+			transform: scale(0)
+
+		h4, p
+			transform: translateX(120%)
+			opacity: 0
+
+.sublist-show
+	
+	.sublist-img
+		transition: all 1s
+		transform: translateX(0)
+		opacity: 1
+
+	.sublist-content
+
+		h3
+			transition: all 1s
+			transform: translateX(0)
+			opacity: 1
+
+		& > p
+			transition: all 1s .2s
+			transform: translateX(0)
+			opacity: 1
+
+	.sublist-upload
+
+		.sublist-upload-img
+			transition: all 1s .8s
+			transform: scale(1)
+
+		h4
+			transition: all 1s .4s
+			transform: translateX(0)
+			opacity: 1
+
+		p
+			transition: all 1s .6s
+			transform: translateX(0)
+			opacity: 1
+		
+	.sublist-download
+
+		.sublist-download-img
+			transition: all 1s 1.2s
+			transform: scale(1)
+
+		h4
+			transition: all 1s .8s
+			transform: translateX(0)
+			opacity: 1
+
+		p
+			transition: all 1s 1s
+			transform: translateX(0)
+			opacity: 1
+
+
+
+
+
+// =============================== SECTION-PICTURE
+
+.picture .picture__description-hide
+	h3
+		transform: translateX(-100%)
+		opacity: 0
+
+	p
+		transform: translateX(100%)
+		opacity: 0
+
+.picture .picture__description-show
+	h3, p
+		transition: all 1s
+		transform: translateX(0)
+		opacity: 1
+
+.picture .gallery-item-hide
+	opacity: 0
+	transform: translateY(-50%) translateX(50%)
+
+.picture .gallery-item-show
+	animation: gallery-item 1s forwards
+
+@keyframes gallery-item
+	0%
+		opacity: 0
+		transform: translateY(-50%) translateX(50%)
+
+	100%
+		opacity: 1
+		transform: translateY(0) translateX(0)
+
+.picture .gallery-popup
+	overflow: hidden
+
+.picture .gallery-popup-fadeIn
+	opacity: 0
+	animation: gallery-popup-fadeIn .3s forwards
+
+@keyframes gallery-popup-fadeIn
+
+	0%
+		opacity: 0
+
+	100%
+		opacity: 1
+
+.picture .gallery-popup-fadeOut
+	opacity: 1
+	animation: gallery-popup-fadeOut .3s forwards
+
+@keyframes gallery-popup-fadeOut
+
+	0%
+		opacity: 1
+
+	100%
+		opacity: 0
+
+
+
+
+		
+
+// =============================== SECTION-FEATURES
+
+.features .features-item-hide
+
+	&:nth-child(1)
+		transform: translateX(-100%) scale(0)
+		opacity: 0
+
+	&:nth-child(2)
+		transform: translateX(0) scale(0)
+		opacity: 0
+
+	&:nth-child(3)
+		transform: translateX(100%) scale(0)
+		opacity: 0
+
+
+.features .features-item-show
+
+	&:nth-child(1), &:nth-child(2), &:nth-child(3)
+		transition: all 1s
+		transform: translateX(0) scale(1)
+		opacity: 1
+
+
+
+
+// =============================== SECTION-PRICING
+
+.pricing .pricing-item-hide 
+	transform: translateY(50%)
+
+.pricing .pricing-item-show 
+	transition: margin .5s, transform 1s
+	transform: translateY(0)	
+	
+.pricing
+
+	.pricing-item:nth-of-type(1) .pricing-item__description-animateStart li
+		will-change: transform, opacity
+		transform: translateX(-500%)
+		opacity: 0
+
+	.pricing-item:nth-of-type(2) .pricing-item__description-animateStart li
+		will-change: transform, opacity
+		transform: translateY(500%)
+		opacity: 0
+
+	.pricing-item:nth-of-type(3) .pricing-item__description-animateStart li
+		will-change: transform, opacity
+		transform: translateX(500%)
+		opacity: 0
+	
+.pricing .pricing-item:nth-of-type(1) .pricing-item__description-animateEnd
+
+	li:nth-of-type(1)
+		animation: pricingBlockAnimationLeft 1s forwards
+
+	li:nth-of-type(2)
+		animation: pricingBlockAnimationLeft 1s .1s forwards
+
+	li:nth-of-type(3)
+		animation: pricingBlockAnimationLeft 1s .2s forwards
+
+	li:nth-of-type(4)
+		animation: pricingBlockAnimationLeft 1s .3s forwards
+
+	li:nth-of-type(5)
+		animation: pricingBlockAnimationLeft 1s .4s forwards
+
+	li:nth-of-type(6)
+		animation: pricingBlockAnimationLeft 1s .5s forwards
+
+.pricing .pricing-item:nth-of-type(2) .pricing-item__description-animateEnd
+
+	li:nth-of-type(1)
+		animation: pricingBlockAnimationCenter 1s forwards
+
+	li:nth-of-type(2)
+		animation: pricingBlockAnimationCenter 1s .1s forwards
+
+	li:nth-of-type(3)
+		animation: pricingBlockAnimationCenter 1s .2s forwards
+
+	li:nth-of-type(4)
+		animation: pricingBlockAnimationCenter 1s .3s forwards
+
+	li:nth-of-type(5)
+		animation: pricingBlockAnimationCenter 1s .4s forwards
+
+	li:nth-of-type(6)
+		animation: pricingBlockAnimationCenter 1s .5s forwards	
+
+.pricing .pricing-item:nth-of-type(3) .pricing-item__description-animateEnd
+
+	li:nth-of-type(1)
+		animation: pricingBlockAnimationRight 1s forwards
+
+	li:nth-of-type(2)
+		animation: pricingBlockAnimationRight 1s .1s forwards
+
+	li:nth-of-type(3)
+		animation: pricingBlockAnimationRight 1s .2s forwards
+
+	li:nth-of-type(4)
+		animation: pricingBlockAnimationRight 1s .3s forwards
+
+	li:nth-of-type(5)
+		animation: pricingBlockAnimationRight 1s .4s forwards
+
+	li:nth-of-type(6)
+		animation: pricingBlockAnimationRight 1s .5s forwards		
+
+@keyframes pricingBlockAnimationLeft
+	0%
+		transform: translateX(-500%)
+		opacity: 0
+		
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+@keyframes pricingBlockAnimationCenter
+	0%
+		transform: translateY(500%)
+		opacity: 0
+		
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+@keyframes pricingBlockAnimationRight
+	0%
+		transform: translateX(500%)
+		opacity: 0
+		
+	100%
+		transform: translateX(0)
+		opacity: 1
+	
+	
+
+
+
+// =============================== SECTION-TESTIMONIAL
+
+.testimonials .testimonials-item__text-hide
+	opacity: 0
+	transform: scale(0)
+	will-change: opacity, transform
+		
+.testimonials .testimonials-item__text-show
+	transition: opacity .5s, transform .5s
+	opacity: 1
+	transform: scale(1)
+
+.testimonials .person-img-hide
+	transform: scale(0)
+
+.testimonials .person-img-show
+	transition: transform .5s
+	transform: scale(1)
+
+.testimonials .person-name-hide
+	overflow: hidden
+
+	h3
+		transform: translateY(-200%)
+		opacity: 0
+
+	p
+		transform: translateY(200%)
+		opacity: 0
+
+.testimonials .person-name-show
+
+	h3
+		transition: transform .5s, opacity 1s
+		transform: translateY(0)
+		opacity: 1
+
+	p
+		transition: transform .5s, opacity 1s
+		transform: translateY(0)
+		opacity: 1
+
+// =============================== SECTION-CONTACT
+	
+.contactUser-hide
+	transform: translateX(-100%)
+	opacity: 0
+	border-bottom-color: $secondary-color !important
+
+	&::placeholder
+		color: $secondary-color !important
+
+.contactUser-show
+	transition: all 1s
+	transform: translateX(0)
+	opacity: 1
+	border-bottom-color: #D5D5D5 !important
+
+	&::placeholder
+		transition: color 1s
+		color: #D5D5D5 !important
+
+.contactMessage-hide
+	transform: translateX(100%)
+	opacity: 0
+	border-bottom-color: $secondary-color !important
+
+	&::placeholder
+		color: $secondary-color !important
+
+.contactMessage-show
+	transition: all 1s
+	transform: translateX(0)
+	opacity: 1
+	border-bottom-color: #D5D5D5 !important
+
+	&::placeholder
+		transition: color 1s
+		color: #D5D5D5 !important
+
+.contactBtn-animate
+	animation: contactBtn 1s
+	
+@keyframes contactBtn
+	0% 
+		transform: scaleX(1)
+
+	50%
+		transform: scaleX(1.2)
+
+	100%
+		transform: scaleX(1)
+	
+	
+	
+// =============================== FOOTER	
+	
+.footer-hide
+	transform: translateY(100%)
+
+.footer-show
+	transition: transform 1s
+	transform: translateY(0)
